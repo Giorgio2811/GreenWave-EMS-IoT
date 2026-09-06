@@ -1,0 +1,1427 @@
+[
+    {
+        "id": "6a73255da9636885",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4b525d66e754f00d",
+        "type": "ui-base",
+        "name": "Interfaccia base",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "page",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "94d0d523b8d2abb7",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "d45a710e503c3e0f",
+        "type": "ui-page",
+        "name": "Dashboard emergence",
+        "ui": "4b525d66e754f00d",
+        "path": "/home",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "94d0d523b8d2abb7",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": true,
+        "disabled": false
+    },
+    {
+        "id": "ee46c66ddf9391dd",
+        "type": "ui-group",
+        "name": "Vehicle Telemetry",
+        "page": "d45a710e503c3e0f",
+        "width": "3",
+        "height": "7",
+        "order": 1,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "1bbb5c2527e068df",
+        "type": "influxdb",
+        "hostname": "127.0.0.1",
+        "port": 8086,
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "http://127.0.0.1:8086",
+        "timeout": 10,
+        "rejectUnauthorized": true
+    },
+    {
+        "id": "7df40f6f24d02588",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "88e8f693537f362c",
+        "type": "ui-group",
+        "name": "Intersection Status",
+        "page": "d45a710e503c3e0f",
+        "width": "4",
+        "height": "1",
+        "order": 2,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "717fd91559a3b677",
+        "type": "ui-group",
+        "name": "AI Operational Report",
+        "page": "d45a710e503c3e0f",
+        "width": "5",
+        "height": "8",
+        "order": 3,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "c451032289e7d097",
+        "type": "ui-group",
+        "name": "Tracking GPS",
+        "page": "d45a710e503c3e0f",
+        "width": "12",
+        "height": "10",
+        "order": 4,
+        "showTitle": true,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "67b717e0dfc87399",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "f46883fd93415371",
+        "type": "mqtt in",
+        "z": "6a73255da9636885",
+        "name": "",
+        "topic": "city/ems/ambulance1/gps",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "7df40f6f24d02588",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 240,
+        "wires": [
+            [
+                "d7aaa2eaceac13e9",
+                "d966da47d7fdac2c",
+                "bd497b96d83fdf8a",
+                "af9b702fd7a1db72",
+                "1f2d4f94670f7fcb"
+            ]
+        ]
+    },
+    {
+        "id": "d7aaa2eaceac13e9",
+        "type": "debug",
+        "z": "6a73255da9636885",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "76806f9fe0b3e2ba",
+        "type": "worldmap",
+        "z": "6a73255da9636885",
+        "name": "",
+        "lat": "44.4078",
+        "lon": " 8.9777",
+        "zoom": "18",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 680,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d966da47d7fdac2c",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Core Logic: Green Wave Controller",
+        "func": "const incrocioLat = 44.3995;\nconst incrocioLon = 8.9851;\n\n// 1. TRAFFIC FILTER\nlet ambLat = msg.payload.latitude;\nlet ambLon = msg.payload.longitude;\nlet sirena = msg.payload.siren_active;\n\nif (ambLat === undefined || ambLon === undefined) {\n    return null;\n}\n\nfunction calcolaDistanza(lat1, lon1, lat2, lon2) {\n    const R = 6371e3;\n    const p1 = lat1 * Math.PI / 180;\n    const p2 = lat2 * Math.PI / 180;\n    const deltaP = (lat2 - lat1) * Math.PI / 180;\n    const deltaLambda = (lon2 - lon1) * Math.PI / 180;\n    const a = Math.sin(deltaP / 2) * Math.sin(deltaP / 2) + Math.cos(p1) * Math.cos(p2) * Math.sin(deltaLambda / 2) * Math.sin(deltaLambda / 2);\n    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));\n    return R * c;\n}\n\nlet distanzaAttuale = calcolaDistanza(incrocioLat, incrocioLon, ambLat, ambLon);\nlet distanzaPrecedente = context.get('distanzaPrecedente') || Infinity;\nlet statoOndaVerde = context.get('statoOndaVerde') || \"SPENTA\";\nlet emergenzaInCorso = context.get('emergenzaInCorso') || false;\n\nlet inAvvicinamento = distanzaAttuale < distanzaPrecedente;\nlet sottoSoglia = distanzaAttuale <= 300;\n\ncontext.set('distanzaPrecedente', distanzaAttuale);\nlet msgDistanza = { payload: Math.round(distanzaAttuale) };\n\n// Salviamo i dati puri dell'ambulanza prima di sovrascrivere il payload\n// Questo garantisce che Ollama riceva tutte le statistiche intatte\nlet datiAmbulanzaBackup = { ...msg.payload };\n\n// --- CASE A: GREEN WAVE ACTIVATION (< 300m) ---\nif (sottoSoglia && sirena === true && statoOndaVerde === \"SPENTA\" && inAvvicinamento) {\n    context.set('emergenzaInCorso', true);\n    context.set('statoOndaVerde', \"ATTIVA\");\n\n    msg.payload = {\n        \"command\": \"green_wave\",\n        \"action\": \"force_green\",\n        \"distance_m\": Math.round(distanzaAttuale)\n    };\n\n    let msgResetReport = {\n        payload: \"⏳ Green Wave active. Waiting for the ambulance to cross the intersection to generate the operational report...\"\n    };\n\n    return [msg, msgDistanza, msgResetReport, null];\n}\n\n// --- CASE A.2: GREEN WAVE DEACTIVATION AND OLLAMA TRIGGER ---\n// L'IA scatta ora: l'ambulanza si sta allontanando e ha superato i 300 metri\nif (statoOndaVerde === \"ATTIVA\" && !inAvvicinamento && distanzaAttuale > 300) {\n    context.set('statoOndaVerde', \"SPENTA\");\n\n    let msgSblocco = {\n        payload: {\n            \"command\": \"normal\",\n            \"action\": \"standard_cycle\",\n            \"distance_m\": Math.round(distanzaAttuale)\n        }\n    };\n\n    // Inneschiamo la generazione del prompt LLM dal cavo numero 4\n    let msgPerOllama = {\n        dati_emergenza: datiAmbulanzaBackup,\n        payload: \"AI Trigger\"\n    };\n\n    return [msgSblocco, msgDistanza, null, msgPerOllama];\n}\n\n// --- CASE B: EMERGENCY FINISHED (Arrived at hospital) ---\nif (sirena === false && emergenzaInCorso === true) {\n    context.set('emergenzaInCorso', false);\n    context.set('statoOndaVerde', \"SPENTA\");\n\n    msg.payload = {\n        \"event_status\": \"Ambulance arrived at destination.\"\n    };\n\n    return [null, msgDistanza, null, null];\n}\n\n// Standard behavior (waiting)\nreturn [null, msgDistanza, null, null];",
+        "outputs": 4,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 240,
+        "wires": [
+            [
+                "89b42db0beb8f4d3",
+                "6fc13be259746061",
+                "1eeb69bea3b292bf",
+                "6cff1b351c1ea2b6"
+            ],
+            [
+                "3dc71dddf21c3324",
+                "9f1e7d7b6768dfaa"
+            ],
+            [
+                "cca8225cda10d915"
+            ],
+            [
+                "c6d6592af36cc99a"
+            ]
+        ]
+    },
+    {
+        "id": "12749a331b82168a",
+        "type": "debug",
+        "z": "6a73255da9636885",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2080,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "bd497b96d83fdf8a",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Format Telemetry Mapping",
+        "func": "let datiInArrivo = msg.payload;\nlet coloreSirena;\n\n// Controlliamo se c'è un'emergenza in corso\nif (datiInArrivo.siren_active === true) {\n    // MAGIA LAMPEGGIANTE (Rosso/Blu)\n    let isRed = context.get('isRed') || false;\n    isRed = !isRed;\n    context.set('isRed', isRed);\n    coloreSirena = isRed ? \"red\" : \"blue\";\n} else {\n    // AMBULANZA A RIPOSO: Rimane del suo colore standard (Rosso)\n    coloreSirena = \"red\";\n}\n\nmsg.payload = {\n    name: \"Ambulance_EMS\",\n    lat: datiInArrivo.latitude,\n    lon: datiInArrivo.longitude,\n    icon: \"ambulance\",\n    iconColor: coloreSirena,       // Cambia in base all'emergenza o resta fissa!\n    extraclass: \"fa-solid\",\n\n    command: {\n        lat: datiInArrivo.latitude,\n        lon: datiInArrivo.longitude,\n        zoom: 14\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "76806f9fe0b3e2ba"
+            ]
+        ]
+    },
+    {
+        "id": "b18daf192b22b7fd",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Initialize Intersection Marker",
+        "func": "msg.payload = {\n    name: \"Smart_Intersection\",\n    lat: 44.3995,\n    lon: 8.9851,\n    icon: \"circle\",          // Stessa identica forma del semaforo dinamico!\n    iconColor: \"gray\",       // Parte grigio (in attesa di connessione)\n    extraclass: \"fa-solid\"\n};\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "76806f9fe0b3e2ba"
+            ]
+        ]
+    },
+    {
+        "id": "3dc71dddf21c3324",
+        "type": "ui-gauge",
+        "z": "6a73255da9636885",
+        "name": "",
+        "group": "ee46c66ddf9391dd",
+        "order": 1,
+        "value": "payload",
+        "valueType": "msg",
+        "width": "4",
+        "height": "3",
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Ambulance Distance",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "m",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "300",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "1089",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 1700,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5c4ef17f8b6f9387",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Generate AI Prompt",
+        "func": "// 1. Recuperiamo la copia dei dati dell'ambulanza\nlet dati_amb = msg.dati_emergenza;\n\n// 2. Recuperiamo il meteo estratto dal nodo OpenWeatherMap\nlet meteo_desc = msg.payload.weather;\nlet meteo_temp = msg.payload.tempc;\n\n// 3. Recuperiamo i dati del traffico salvati in memoria dal sensore virtuale!\nlet autoInCoda = flow.get(\"traffico_snapshot\") || 0;\nlet statoTraffico = flow.get(\"stato_snapshot\") || \"Unknown\";\n\n// 4. Creiamo un \"Prompt Agente\" severo e direttivo in INGLESE per Llama\nlet promptIA = `You are a traffic control operator. Ambulance EMS-1 has just completed an emergency response.\nTechnical data: ${JSON.stringify(dati_amb)}.\nTraffic at the intersection: ${autoInCoda} waiting vehicles (Congestion level: ${statoTraffico}).\nCurrent weather: ${meteo_desc}, ${meteo_temp}°C.\n\nWrite an Operational Report IN ENGLISH (maximum 3 sentences).\nSTRICT RULES TO FOLLOW:\n1. MAIN TOPIC: The absolute focus must be on the success of the \"Green Wave\" system, specifying how it allowed bypassing the traffic of ${autoInCoda} vehicles.\n2. SECONDARY TOPIC: Dedicate ONLY THE LAST half sentence to the weather, briefly mentioning it as a contextual factor.\n3. STYLE: Formal, cold, technical, and institutional.`;\n\n// 5. Inviamo l'ordine a Ollama\nmsg.payload = {\n    \"model\": \"llama3.2\",\n    \"prompt\": promptIA,\n    \"stream\": false\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 640,
+        "wires": [
+            [
+                "e009940ef9d25318"
+            ]
+        ]
+    },
+    {
+        "id": "e009940ef9d25318",
+        "type": "http request",
+        "z": "6a73255da9636885",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:11434/api/generate",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 1370,
+        "y": 640,
+        "wires": [
+            [
+                "d7dd54d8dbca9701",
+                "1846d6e4f781e590"
+            ]
+        ]
+    },
+    {
+        "id": "d7dd54d8dbca9701",
+        "type": "debug",
+        "z": "6a73255da9636885",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1540,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "1846d6e4f781e590",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Parse AI Output",
+        "func": "// Check safely where Ollama has placed the text response\nlet aiText = \"\";\n\nif (typeof msg.payload === \"string\") {\n    try {\n        let parsed = JSON.parse(msg.payload);\n        aiText = parsed.response || (parsed.message && parsed.message.content) || msg.payload;\n    } catch (e) {\n        aiText = msg.payload;\n    }\n} else if (typeof msg.payload === \"object\" && msg.payload !== null) {\n    // Standard handling for Ollama response object (supports both generation and chat)\n    aiText = msg.payload.response || (msg.payload.message && msg.payload.message.content) || JSON.stringify(msg.payload);\n}\n\n// Assign the cleaned string to the payload for the dark terminal\nmsg.payload = aiText;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1560,
+        "y": 560,
+        "wires": [
+            [
+                "cca8225cda10d915"
+            ]
+        ]
+    },
+    {
+        "id": "cca8225cda10d915",
+        "type": "ui-template",
+        "z": "6a73255da9636885",
+        "group": "717fd91559a3b677",
+        "page": "",
+        "ui": "",
+        "name": "AI Console Output",
+        "order": 1,
+        "width": "6",
+        "height": "7",
+        "head": "",
+        "format": "<div\n    style=\"background-color: #1e1e1e; color: #00bfa5; padding: 20px; border-radius: 8px; font-family: 'Courier New', Courier, monospace; height: 100%; max-height: 390px; overflow-y: auto; box-sizing: border-box; box-shadow: inset 0 0 17px #000000; margin: 0;\">\n    <h3 style=\"color: #ffffff; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px;\">\n        <span style=\"color: #00ff00;\">●</span> AI_OPERATIONAL_CONSOLE\n    </h3>\n    <div style=\"white-space: pre-wrap; line-height: 1.5; font-size: 16px; color: #00bfa5;\">\n        {{msg.payload}}\n    </div>\n</div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1750,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "89b42db0beb8f4d3",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Format UI Status",
+        "func": "// Safely extract the command\nlet comando = msg.payload && msg.payload.command ? msg.payload.command : \"unknown\";\n\nif (comando === \"green_wave\") {\n    msg.payload = \"ACTIVE\";\n}\nelse if (comando === \"normal\") {\n    msg.payload = \"INACTIVE\";\n}\nelse {\n    // Kill phantom messages from old tests\n    msg.payload = \"INACTIVE\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1490,
+        "y": 280,
+        "wires": [
+            [
+                "33972bb76d581522"
+            ]
+        ]
+    },
+    {
+        "id": "99f17dce6a773005",
+        "type": "csv",
+        "z": "6a73255da9636885",
+        "name": "",
+        "spec": "rfc",
+        "sep": ";",
+        "hdrin": "",
+        "hdrout": "none",
+        "multi": "one",
+        "ret": "\\r\\n",
+        "temp": "",
+        "skip": "0",
+        "strings": true,
+        "include_empty_strings": "",
+        "include_null_values": "",
+        "x": 1410,
+        "y": 160,
+        "wires": [
+            [
+                "c32c09d4bc44051d"
+            ]
+        ]
+    },
+    {
+        "id": "c32c09d4bc44051d",
+        "type": "file",
+        "z": "6a73255da9636885",
+        "name": "",
+        "filename": "C:\\Users\\HP\\Downloads\\iot2\\GreenWave-EMS\\log_emergence.csv",
+        "filenameType": "str",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1760,
+        "y": 160,
+        "wires": [
+            [
+                "12749a331b82168a"
+            ]
+        ]
+    },
+    {
+        "id": "096e9d2fb5edd49e",
+        "type": "mqtt out",
+        "z": "6a73255da9636885",
+        "name": "",
+        "topic": "city/ems/trafficlight1/cmd",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "7df40f6f24d02588",
+        "x": 1510,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9f1e7d7b6768dfaa",
+        "type": "influxdb out",
+        "z": "6a73255da9636885",
+        "influxdb": "1bbb5c2527e068df",
+        "name": "Ambulance Telemetry",
+        "measurement": "telemetria_ambulanza",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "project of iot",
+        "bucket": "Iot",
+        "x": 1680,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "c6d6592af36cc99a",
+        "type": "openweathermap",
+        "z": "6a73255da9636885",
+        "name": "",
+        "wtype": "current",
+        "lon": "",
+        "lat": "",
+        "city": "Genoa",
+        "country": "Italia",
+        "language": "en",
+        "x": 930,
+        "y": 640,
+        "wires": [
+            [
+                "5c4ef17f8b6f9387"
+            ]
+        ]
+    },
+    {
+        "id": "02f24c374fd82c0e",
+        "type": "mqtt in",
+        "z": "6a73255da9636885",
+        "name": "",
+        "topic": "city/ems/trafficlight1/status",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "7df40f6f24d02588",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 600,
+        "wires": [
+            [
+                "a5b6a2db6ecc352e",
+                "6d8018431d83afee",
+                "23a4823493279446",
+                "46e33a39fc730493"
+            ]
+        ]
+    },
+    {
+        "id": "a5b6a2db6ecc352e",
+        "type": "debug",
+        "z": "6a73255da9636885",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 340,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "286435376ec5380c",
+        "type": "mqtt in",
+        "z": "6a73255da9636885",
+        "name": "",
+        "topic": "city/ems/trafficlight1/queue",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "7df40f6f24d02588",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 840,
+        "wires": [
+            [
+                "de7520277a2ade79",
+                "fd5f8b372967dd69",
+                "e9b7f871afb0db4d"
+            ]
+        ]
+    },
+    {
+        "id": "de7520277a2ade79",
+        "type": "ui-gauge",
+        "z": "6a73255da9636885",
+        "name": "Traffic",
+        "group": "88e8f693537f362c",
+        "order": 1,
+        "value": "msg.payload.cars_waiting",
+        "valueType": "msg",
+        "width": 3,
+        "height": 3,
+        "gtype": "gauge-half",
+        "gstyle": "needle",
+        "title": "Cars in queue",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "cars",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#5cd65c",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "15",
+                "color": "#ffc800",
+                "text": "",
+                "textType": "label"
+            },
+            {
+                "from": "28",
+                "color": "#ea5353",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "40",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "",
+        "x": 390,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fd5f8b372967dd69",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Cache Queue Data",
+        "func": "// 1. Salvo i dati in memoria per quando Ollama farà il report finale\nflow.set(\"auto_in_coda\", msg.payload.cars_waiting);\nflow.set(\"stato_traffico\", msg.payload.traffic_status);\n\n// 2. Preparo solo il numero delle auto per mandarlo al grafico di Grafana\nmsg.payload = msg.payload.cars_waiting;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 880,
+        "wires": [
+            [
+                "5ea3daad6267105c"
+            ]
+        ]
+    },
+    {
+        "id": "5ea3daad6267105c",
+        "type": "influxdb out",
+        "z": "6a73255da9636885",
+        "influxdb": "1bbb5c2527e068df",
+        "name": "Traffic Queue",
+        "measurement": "coda_traffico",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "project of iot",
+        "bucket": "Iot",
+        "x": 640,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "e9b7f871afb0db4d",
+        "type": "debug",
+        "z": "6a73255da9636885",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 760,
+        "wires": []
+    },
+    {
+        "id": "6fc13be259746061",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Capture Traffic Snapshot",
+        "func": "// We take a \"snapshot\" of the traffic at the exact moment the emergency activates\nlet current_cars = flow.get(\"auto_in_coda\") || 0;\nlet current_status = flow.get(\"stato_traffico\") || \"Unknown\";\n\n// We save the snapshot in a safe storage\nflow.set(\"traffico_snapshot\", current_cars);\nflow.set(\"stato_snapshot\", current_status);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 80,
+        "wires": [
+            [
+                "096e9d2fb5edd49e"
+            ]
+        ]
+    },
+    {
+        "id": "4469e58080c600fd",
+        "type": "inject",
+        "z": "6a73255da9636885",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "green_wave",
+        "payloadType": "str",
+        "x": 1150,
+        "y": 760,
+        "wires": [
+            [
+                "d0a4f2c9dd02f60e"
+            ]
+        ]
+    },
+    {
+        "id": "d0a4f2c9dd02f60e",
+        "type": "mqtt out",
+        "z": "6a73255da9636885",
+        "name": "",
+        "topic": "city/ems/trafficlight1/cmd",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "7df40f6f24d02588",
+        "x": 1390,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "e4a645d6b0ccf338",
+        "type": "ui-template",
+        "z": "6a73255da9636885",
+        "group": "c451032289e7d097",
+        "page": "",
+        "ui": "",
+        "name": "iframe Worldmap",
+        "order": 1,
+        "width": "12",
+        "height": "12",
+        "head": "",
+        "format": "<div style=\"width: 100%; height: 100%; padding: 10px; box-sizing: border-box;\">\n    <iframe src=\"/worldmap\" style=\"width: 100%; height: 100%; border: 2px solid #00bfa5; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);\"></iframe>\n</div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 710,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6d8018431d83afee",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Extract Light State",
+        "func": "let stato = msg.payload.Light_State;\n\nif (stato === \"Green\") {\n    msg.payload = \"GREEN\";\n    msg.color = \"green\";\n}\nelse if (stato === \"Red\") {\n    msg.payload = \"RED\";\n    msg.color = \"red\";\n}\nelse if (stato === \"Blocked_by_Pedestrian\") {\n    msg.payload = \"RED (PEDESTRIAN)\";\n    msg.color = \"red\";\n}\nelse {\n    msg.payload = \"UNKNOWN\";\n    msg.color = \"gray\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 600,
+        "wires": [
+            [
+                "46b4b42dadd1b8dd"
+            ]
+        ]
+    },
+    {
+        "id": "dc6bc21ba8310bcc",
+        "type": "ui-template",
+        "z": "6a73255da9636885",
+        "group": "ee46c66ddf9391dd",
+        "page": "",
+        "ui": "",
+        "name": "Grafana",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<div\n    style=\"display: flex; justify-content: center; align-items: center; height: 100%; padding: 10px; box-sizing: border-box;\">\n    <md-button class=\"md-raised\"\n        onclick=\"window.open('http://localhost:3000/d/adqt7cm/greenwave-ems?orgId=1&from=now-30d&to=now&timezone=browser&var-AmbulanceDistance=&showCategory=repeat-options', '_blank')\"\n        style=\"display: flex; justify-content: center; align-items: center; margin: 0; background-color: #1976D2; color: white; font-weight: bold; width: 100%; font-size: 16px; border-radius: 6px; padding: 10px; cursor: pointer; transition: 0.3s;\">\n        <i class=\"fa fa-area-chart\" style=\"margin-right: 8px; font-size: 20px;\"></i>\n        OPEN GRAFANA HISTORY\n    </md-button>\n</div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 640,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "23a4823493279446",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Evaluate Pedestrian Alarm",
+        "func": "// Se c'è il pedone invia true, altrimenti false\nif (msg.payload && msg.payload.Pedestrian_detected === true) {\n    msg.payload = true;\n} else {\n    msg.payload = false;\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 540,
+        "wires": [
+            [
+                "2ff9854826a68642"
+            ]
+        ]
+    },
+    {
+        "id": "2ff9854826a68642",
+        "type": "ui-template",
+        "z": "6a73255da9636885",
+        "group": "88e8f693537f362c",
+        "page": "",
+        "ui": "",
+        "name": "Pedestrian Alarm",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <div style=\"display: flex; align-items: center; justify-content: space-between; padding: 10px 0;\">\n        <span style=\"font-size: 14px; font-weight: normal;\">Pedestrian Alarm</span>\n        <div :style=\"{\n            'width': '28px', \n            'height': '28px', \n            'border-radius': '50%', \n            'background-color': msg.payload ? '#ff0000' : '#e0e0e0',\n            'box-shadow': msg.payload ? '0 0 20px #ff0000' : 'inset 0 3px 5px rgba(0,0,0,0.2)',\n            'transition': 'all 0.3s ease'\n        }\"></div>\n    </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 690,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6712fe1c505589ed",
+        "type": "ui-button",
+        "z": "6a73255da9636885",
+        "group": "88e8f693537f362c",
+        "name": "Reset ",
+        "label": "RESET ⚠️",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "emulateClick": false,
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "iconPosition": "left",
+        "payload": "{\"command\": \"reset\"}",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "buttonColor": "#d32f2f",
+        "textColor": "white",
+        "iconColor": "",
+        "enableClick": true,
+        "enablePointerdown": false,
+        "pointerdownPayload": "",
+        "pointerdownPayloadType": "str",
+        "enablePointerup": false,
+        "pointerupPayload": "",
+        "pointerupPayloadType": "str",
+        "x": 1110,
+        "y": 880,
+        "wires": [
+            [
+                "d0a4f2c9dd02f60e"
+            ]
+        ]
+    },
+    {
+        "id": "af9b702fd7a1db72",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Calculate Target Arrival",
+        "func": "// Colore di base quando l'ospedale è \"tranquillo\"\nlet colorePulsante = \"red\";\n\n// Se l'ambulanza è in emergenza, facciamo pulsare l'ospedale!\nif (msg.payload.siren_active === true) {\n    let isDark = context.get('isDark') || false;\n    isDark = !isDark;\n    context.set('isDark', isDark);\n\n    // Scegliamo il colore lampeggiante\n    colorePulsante = isDark ? \"darkred\" : \"red\";\n}\n\nmsg.payload = {\n    name: \"Arrival\",\n    lat: 44.3915,\n    lon: 8.9930,\n    icon: \"h-square\",\n    iconColor: colorePulsante,   // 🔴 Lampeggia in emergenza, resta rosso fisso a riposo!\n    extraclass: \"fa-solid\"\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 420,
+        "wires": [
+            [
+                "76806f9fe0b3e2ba"
+            ]
+        ]
+    },
+    {
+        "id": "46e33a39fc730493",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Update Light Color",
+        "func": "// 1. Leggiamo lo stato mandato dall'ESP32 o dal sistema\nlet statoSemaforo = msg.payload.Light_State;\n\n// 2. Prepariamo il colore (Di base è GRIGIO = Spento/Sconosciuto)\nlet coloreNuovo = \"gray\";\n\nif (statoSemaforo === \"Red\") {\n    coloreNuovo = \"red\";\n} else if (statoSemaforo === \"Green\") {\n    coloreNuovo = \"green\";\n} else if (statoSemaforo === \"Blocked_by_Pedestrian\") {\n    coloreNuovo = \"#ff0000\";\n}\n\n// 3. LA MAGIA ANTI-SFARFALLIO: Leggiamo la memoria\nlet colorePrecedente = context.get('colorePrecedente');\n\n// Se il colore calcolato è IDENTICO a quello che è già sulla mappa, FERMATI QUI!\nif (coloreNuovo === colorePrecedente) {\n    return null; // Non mandare niente alla mappa, così non sfarfalla\n}\n\n// Se invece il colore è cambiato davvero, salviamolo in memoria per la prossima volta\ncontext.set('colorePrecedente', coloreNuovo);\n\n// 4. Creiamo il comando per aggiornare la mappa\nmsg.payload = {\n    name: \"Smart_Intersection\",    // ATTENZIONE: Deve essere uguale al nome nell'Init!\n    lat: 44.3995,\n    lon: 8.9851,\n    icon: \"circle\",                // Usiamo il cerchio classico pulito\n    iconColor: coloreNuovo,        // 🟢🔴 Il colore che cambia!\n    extraclass: \"fa-solid\"\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 480,
+        "wires": [
+            [
+                "76806f9fe0b3e2ba"
+            ]
+        ]
+    },
+    {
+        "id": "1eeb69bea3b292bf",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Format CSV Record",
+        "func": "// This script intercepts traffic light messages and turns them into an elegant report for Excel\n\n// 1. Retrieve how many cars were in queue at that moment (thanks to memory!)\nlet carsInQueue = flow.get(\"traffico_snapshot\") || 0;\n\n// 2. Prepare precise and readable date and time\nlet currentDate = new Date().toLocaleDateString(\"it-IT\");\nlet currentTime = new Date().toLocaleTimeString(\"it-IT\");\n\n// 3. Translate technical commands into human-readable language\nlet eventType = \"Unknown\";\nlet trafficLightAction = \"None\";\nlet bypassedCars = 0;\n\nif (msg.payload.command === \"green_wave\") {\n    eventType = \"Green Wave Activation\";\n    trafficLightAction = \"Intersection Locked (Ambulance Priority)\";\n    bypassedCars = carsInQueue; // We put the number of cars only when it activates!\n} else if (msg.payload.command === \"normal\") {\n    eventType = \"Emergency End\";\n    trafficLightAction = \"Normal Cycle Restoration\";\n    bypassedCars = \"-\";\n} else {\n    // If it's an unexpected message, we block it\n    return null;\n}\n\n// 4. Create the perfect format for Excel\nmsg.payload = {\n    \"Date\": currentDate,\n    \"Time\": currentTime,\n    \"Event\": eventType,\n    \"System Action\": trafficLightAction,\n    \"Cars Bypassed\": bypassedCars,\n    \"Activation Distance (m)\": msg.payload.distance_m || 0\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1220,
+        "y": 160,
+        "wires": [
+            [
+                "99f17dce6a773005"
+            ]
+        ]
+    },
+    {
+        "id": "6cff1b351c1ea2b6",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Format InfluxDB Metric",
+        "func": "// Clone the message so we don't mess up the rest of the flow\nlet nuovoMsg = { payload: {} };\n\n// If the command is green_wave, save 1, otherwise save 0\nif (msg.payload.command === \"green_wave\") {\n    nuovoMsg.payload.stato_onda = 1;\n} else if (msg.payload.command === \"normal\") {\n    nuovoMsg.payload.stato_onda = 0;\n} else {\n    // If it's neither (maybe it's just the distance), don't save anything\n    return null;\n}\n\nreturn nuovoMsg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1440,
+        "y": 220,
+        "wires": [
+            [
+                "7ff7e7649cfd75e5"
+            ]
+        ]
+    },
+    {
+        "id": "7ff7e7649cfd75e5",
+        "type": "influxdb out",
+        "z": "6a73255da9636885",
+        "influxdb": "1bbb5c2527e068df",
+        "name": "Traffic Light Status",
+        "measurement": "stato_semaforo",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "project of iot",
+        "bucket": "Iot",
+        "x": 1690,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "http_in_download",
+        "type": "http in",
+        "z": "6a73255da9636885",
+        "name": "Trigger Download Request",
+        "url": "/download-log",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "read_csv_file"
+            ]
+        ]
+    },
+    {
+        "id": "read_csv_file",
+        "type": "file in",
+        "z": "6a73255da9636885",
+        "name": "Read Log CSV",
+        "filename": "C:\\Users\\HP\\Downloads\\iot2\\GreenWave-EMS\\log_emergence.csv",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 360,
+        "y": 80,
+        "wires": [
+            [
+                "aba9329b5aa7cd6d"
+            ]
+        ]
+    },
+    {
+        "id": "http_response_download",
+        "type": "http response",
+        "z": "6a73255da9636885",
+        "name": "Provide File Download",
+        "statusCode": "",
+        "headers": {},
+        "x": 860,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9027dfac43baf27f",
+        "type": "inject",
+        "z": "6a73255da9636885",
+        "name": "Start Simulation",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 340,
+        "wires": [
+            [
+                "b18daf192b22b7fd"
+            ]
+        ]
+    },
+    {
+        "id": "46b4b42dadd1b8dd",
+        "type": "ui-template",
+        "z": "6a73255da9636885",
+        "group": "88e8f693537f362c",
+        "page": "",
+        "ui": "",
+        "name": "Traffic Light Indicator",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <div style=\"display: flex; align-items: center; justify-content: space-between; padding: 10px 0;\">\n        <span style=\"font-size: 14px; font-weight: normal;\">Traffic Light Color</span>\n        <div :style=\"{\n            'width': '28px', \n            'height': '28px', \n            'border-radius': '50%', \n            'background-color': \n                (msg.payload === 'RED' || msg.payload === 'RED (PEDESTRIAN)') ? '#ff0000' : \n                (msg.payload === 'GREEN') ? '#00cc00' : '#e0e0e0',\n            'box-shadow': \n                (msg.payload === 'RED' || msg.payload === 'RED (PEDESTRIAN)' || msg.payload === 'GREEN') ? '0 2px 5px rgba(0,0,0,0.3)' : 'inset 0 3px 5px rgba(0,0,0,0.2)',\n            'transition': 'all 0.3s ease'\n        }\"></div>\n    </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 680,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1fc8a6983e1eb288",
+        "type": "ui-text",
+        "z": "6a73255da9636885",
+        "group": "ee46c66ddf9391dd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Ambulance Status",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#717171",
+        "wrapText": false,
+        "className": "",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 650,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "1f2d4f94670f7fcb",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Parse Ambulance Status",
+        "func": "// 1. Se il sistema è appena partito o non ci sono dati\nif (!msg.payload || typeof msg.payload.siren_active === \"undefined\") {\n    msg.payload = \"NOT AVAILABLE\";\n    return msg;\n}\n\n// 2. Se i dati ci sono, controlliamo lo stato\nif (msg.payload.siren_active === true) {\n    msg.payload = \"EMERGENCY IN PROGRESS\";\n} else {\n    msg.payload = \"NORMAL\";\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "1fc8a6983e1eb288"
+            ]
+        ]
+    },
+    {
+        "id": "c3aa362b2ac9f067",
+        "type": "ui-template",
+        "z": "6a73255da9636885",
+        "group": "ee46c66ddf9391dd",
+        "page": "",
+        "ui": "",
+        "name": "CSV Download Widget",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<div\n    style=\"display: flex; justify-content: center; align-items: center; height: 100%; padding: 10px; box-sizing: border-box;\">\n    <a href=\"/download-log\" download=\"log_emergenze.csv\" target=\"_self\"\n        style=\"display: flex; justify-content: center; align-items: center; width: 100%; background-color: #1976D2; color: white; text-align: center; text-decoration: none; font-weight: bold; font-size: 16px; border-radius: 6px; padding: 10px; box-sizing: border-box; transition: 0.3s;\">\n        <i class=\"fa fa-download\" style=\"margin-right: 8px; font-size: 20px;\"></i>\n        DOWNLOAD EMERGENCY LOG\n    </a>\n</div>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 880,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "aba9329b5aa7cd6d",
+        "type": "function",
+        "z": "6a73255da9636885",
+        "name": "Prepare Download Response",
+        "func": "msg.headers = {\n    \"Content-Type\": \"text/csv; charset=utf-8\",\n    \"Content-Disposition\": \"attachment; filename=\\\"log_emergenze.csv\\\"\"\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 600,
+        "y": 80,
+        "wires": [
+            [
+                "http_response_download"
+            ]
+        ]
+    },
+    {
+        "id": "33972bb76d581522",
+        "type": "ui-template",
+        "z": "6a73255da9636885",
+        "group": "88e8f693537f362c",
+        "page": "",
+        "ui": "",
+        "name": "Green Wave Status Widget",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<template>\n    <div style=\"display: flex; align-items: center; justify-content: space-between; padding: 10px 0;\">\n        <span style=\"font-size: 14px; font-weight: normal;\">Green Wave</span>\n        <span style=\"font-size: 14px; font-weight: bold; color: #000000; text-transform: uppercase;\">\n            {{msg.payload}}\n        </span>\n    </div>\n</template>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 1780,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "0401a32f38ed6f86",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "@flowfuse/node-red-dashboard": "1.30.2",
+            "node-red-contrib-influxdb": "0.7.0",
+            "node-red-dashboard": "3.6.6",
+            "node-red-contrib-web-worldmap": "5.8.1",
+            "node-red-node-openweathermap": "1.0.1"
+        }
+    }
+]
